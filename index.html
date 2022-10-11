@@ -27,7 +27,8 @@
     
 
 
-<div class="box-wrap"><div class="box">
+
+<div class="box-wrap"><img src="photo.png" style="float: right;margin-top:-25px;margin-right:-25px;" width="140"><div class="box">
 
     <div><img src="usbsmall.png" /></div>
     <div class="name">Cody Woolf</div>
@@ -49,8 +50,9 @@
     urlParams = new URLSearchParams(urlString);
     e = urlParams.get('e');
     if(e){
-        addMe = '<br /><a href="mailto:'+e+'" class="e">Email me</a> &nbsp;';
-        addMe += '<a href="https://teams.microsoft.com/l/chat/0/0?users='+e+'" class="e">Message me on Teams</a>'
+        addMe = '<br />';
+        addMe += '<a href="https://teams.microsoft.com/l/chat/0/0?users='+e+'" class="e">Message me on Teams</a><br />'
+        addMe += ' <span style="font-size: 12pt;color:#888;">or email me: <strong>'+e+'</strong></span>';
         document.getElementById('detail').innerHTML = addMe;
     }
 </script>
