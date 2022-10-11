@@ -18,6 +18,8 @@
     .name{font-weight: bold;color: #001e79;font-size: 18pt;}
     a{text-decoration: none;background: #003cc8;padding: 10px 25px 10px 25px;border-radius: 5px;color:#fff;}
     a:hover{background: #0058ff;}
+    a.e{background: #fff;color: #003cc8;border: 1px solid #003cc8;border-radius: 5px;}
+    a.e:hover{background: #0058ff;color:#fff;}
 </style>
 </head>
 
@@ -35,6 +37,7 @@
         <a href="https://www.linkedin.com/in/codywoolf"> Connect with me</a>
     </div>
 
+    <div style="text-align: center;" id="detail"></div>
     
     
 
@@ -42,7 +45,14 @@
 
 
 <script type="text/javascript">
-
+    urlString = window.location.search;
+    urlParams = new URLSearchParams(urlString);
+    e = urlParams.get('e');
+    if(e){
+        addMe = '<br /><a href="mailto:'+e+'" class="e">Email me</a> &nbsp;';
+        addMe += '<a href="https://teams.microsoft.com/l/chat/0/0?users='+e+'" class="e">Message me on Teams</a>'
+        document.getElementById('detail').innerHTML = addMe;
+    }
 </script>
 
 </body>
